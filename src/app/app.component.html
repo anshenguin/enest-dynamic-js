@@ -1,0 +1,4 @@
+<div class="main-container">
+<app-email-item *ngFor="let email of emailList; let i = index" [email]="email" [index]="i" (emitDeletion)="onEmailDeleted($event)"></app-email-item>
+<app-input-box (emitEmail)="onEmailAdded($event)" [emailListLength]="emailList.length" (emitLastEmailDeleter)="onLastEmailDeleted()" [lastEmail]="emailList[emailList.length-1]"></app-input-box>
+</div>
